@@ -1,0 +1,290 @@
+{
+  "id": "2838ed4f-fe55-4fc4-86d5-e6c1b2b7ff77",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.marriage": {
+      "name": "marriage",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigint",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "marriage_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "9223372036854775807",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "spouseAId": {
+          "name": "spouseAId",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "spouseBId": {
+          "name": "spouseBId",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "marriageYear": {
+          "name": "marriageYear",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marriageMonth": {
+          "name": "marriageMonth",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "marriageDay": {
+          "name": "marriageDay",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "divorceYear": {
+          "name": "divorceYear",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "divorceMonth": {
+          "name": "divorceMonth",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "divorceDay": {
+          "name": "divorceDay",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additionalInfo": {
+          "name": "additionalInfo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "marriage_spouseAId_person_id_fk": {
+          "name": "marriage_spouseAId_person_id_fk",
+          "tableFrom": "marriage",
+          "tableTo": "person",
+          "columnsFrom": [
+            "spouseAId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "marriage_spouseBId_person_id_fk": {
+          "name": "marriage_spouseBId_person_id_fk",
+          "tableFrom": "marriage",
+          "tableTo": "person",
+          "columnsFrom": [
+            "spouseBId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.person": {
+      "name": "person",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "bigint",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "person_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "9223372036854775807",
+            "cache": "1",
+            "cycle": false
+          }
+        },
+        "firstNames": {
+          "name": "firstNames",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lastNames": {
+          "name": "lastNames",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "marriedName": {
+          "name": "marriedName",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nicknames": {
+          "name": "nicknames",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "birthYear": {
+          "name": "birthYear",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "birthMonth": {
+          "name": "birthMonth",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "birthDay": {
+          "name": "birthDay",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "birthPlaceId": {
+          "name": "birthPlaceId",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deathYear": {
+          "name": "deathYear",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deathMonth": {
+          "name": "deathMonth",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deathDay": {
+          "name": "deathDay",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "deathPlaceId": {
+          "name": "deathPlaceId",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additionalInfo": {
+          "name": "additionalInfo",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "internalNotes": {
+          "name": "internalNotes",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "isVisible": {
+          "name": "isVisible",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": true
+        },
+        "father": {
+          "name": "father",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mother": {
+          "name": "mother",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "person_birthPlaceId_place_id_fk": {
+          "name": "person_birthPlaceId_place_id_fk",
+          "tableFrom": "person",
+          "tableTo": "place",
+          "columnsFrom": [
+            "birthPlaceId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "person_deathPlaceId_place_id_fk": {
+          "name": "person_deathPlaceId_place_id_fk",
+          "tableFrom": "person",
+          "tableTo": "place",
+          "columnsFrom": [
+            "deathPlaceId"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
