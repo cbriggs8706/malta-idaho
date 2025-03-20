@@ -22,8 +22,6 @@ export const readPerson = async (id: PersonSelect['id']) => {
 			// with: {
 			// 	directoryCompany: true,
 			// 	securityReaderGroups: { with: { securityReaderGroup: true } },
-			// 	securityLevelGroups: { with: { securityLevelGroup: true } },
-			// 	securityCards: true,
 			// },
 		})
 		return data
@@ -44,8 +42,6 @@ export const readPersons = async () => {
 			// with: {
 			// 	directoryCompany: true,
 			// 	securityReaderGroups: { with: { securityReaderGroup: true } },
-			// 	securityLevelGroups: { with: { securityLevelGroup: true } },
-			// 	securityCards: true,
 			// },
 		})
 		return data
