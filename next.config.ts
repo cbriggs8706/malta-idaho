@@ -5,6 +5,21 @@ const nextConfig: NextConfig = {
 	async redirects() {
 		return [
 			{
+				source: '/malta-ward',
+				destination: '/church',
+				permanent: true,
+			},
+			{
+				source: '/malta-first-ward',
+				destination: '/church',
+				permanent: true,
+			},
+			{
+				source: '/malta-second-ward',
+				destination: '/church',
+				permanent: true,
+			},
+			{
 				source: '/businesses',
 				destination: '/business',
 				permanent: true,

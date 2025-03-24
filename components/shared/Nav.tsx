@@ -26,8 +26,8 @@ export default function Nav() {
 	return (
 		<header className="bg-white shadow-md sticky top-0 z-50">
 			<div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-				<Link href="/" className="text-xl font-bold text-gray-800">
-					Malta Idaho
+				<Link href="/" className="text-xl font-bold text-foreground">
+					Malta, Idaho
 				</Link>
 
 				{/* Hamburger Button */}
@@ -42,12 +42,14 @@ export default function Nav() {
 				{/* Desktop Menu */}
 				<div className="hidden sm:block">
 					<NavigationMenu>
-						<NavigationMenuList>
+						<NavigationMenuList className=" my-auto">
 							{/* Government */}
 							<NavigationMenuItem>
-								<NavigationMenuTrigger>Government</NavigationMenuTrigger>
+								<NavigationMenuTrigger className="bg-white">
+									Government
+								</NavigationMenuTrigger>
 								<NavigationMenuContent className="p-4">
-									<ul className="grid gap-2 min-w-[200px]">
+									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -74,9 +76,11 @@ export default function Nav() {
 
 							{/* Community */}
 							<NavigationMenuItem>
-								<NavigationMenuTrigger>Community</NavigationMenuTrigger>
+								<NavigationMenuTrigger className="bg-white">
+									Community
+								</NavigationMenuTrigger>
 								<NavigationMenuContent className="p-4">
-									<ul className="grid gap-2 min-w-[200px]">
+									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -113,9 +117,11 @@ export default function Nav() {
 
 							{/* History */}
 							<NavigationMenuItem>
-								<NavigationMenuTrigger>History</NavigationMenuTrigger>
+								<NavigationMenuTrigger className="bg-white">
+									History
+								</NavigationMenuTrigger>
 								<NavigationMenuContent className="p-4">
-									<ul className="grid gap-2 min-w-[200px]">
+									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -142,9 +148,11 @@ export default function Nav() {
 
 							{/* Other */}
 							<NavigationMenuItem>
-								<NavigationMenuTrigger>Other</NavigationMenuTrigger>
+								<NavigationMenuTrigger className="bg-white">
+									Other
+								</NavigationMenuTrigger>
 								<NavigationMenuContent className="p-4">
-									<ul className="grid gap-2 min-w-[200px]">
+									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
