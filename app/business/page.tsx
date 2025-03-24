@@ -1,0 +1,11 @@
+import Image from 'next/image'
+
+export default function Page() {
+	return (
+		<>
+			<h1>Businesses</h1>
+
+			<p></p>
+		</>
+	)
+}
