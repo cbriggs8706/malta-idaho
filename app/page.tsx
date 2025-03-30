@@ -13,6 +13,12 @@ export default function Home() {
 				<h1 className="text-center">The History of Malta, Idaho</h1>
 			</CardHeader>
 
+			<CardDescription className="text-xs p-2 text-center bg-red-200">
+				We are in the process of migrating this site to a new server. Some
+				elements may be unavailable until that has completed. Check back in a
+				couple of weeks to browse the full site again. If you need anything in
+				the meantime, please contact Cameron.
+			</CardDescription>
 			<CardDescription className="text-2xl text-center">
 				Rooted in the Land. Built by Pioneers. Shaped by Community.
 			</CardDescription>

@@ -15,9 +15,9 @@ export default function Page() {
 				<h1 className="text-center">City Ordinances</h1>
 			</CardHeader>
 
-			<CardDescription className="text-2xl text-center">
+			{/* <CardDescription className="text-2xl text-center">
 				Rooted in the Land. Built by Pioneers. Shaped by Community.
-			</CardDescription>
+			</CardDescription> */}
 			<CardContent>
 				<OrdinanceCards ordinances={ordinances} />
 			</CardContent>
