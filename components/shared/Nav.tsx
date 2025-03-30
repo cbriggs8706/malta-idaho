@@ -43,10 +43,10 @@ export default function Nav() {
 				<div className="hidden sm:block">
 					<NavigationMenu>
 						<NavigationMenuList className=" my-auto">
-							{/* Government */}
+							{/* Current */}
 							<NavigationMenuItem>
 								<NavigationMenuTrigger className="bg-white">
-									Government
+									Current
 								</NavigationMenuTrigger>
 								<NavigationMenuContent className="p-4">
 									<ul className="list-none grid gap-2 min-w-[200px]">
@@ -66,28 +66,7 @@ export default function Nav() {
 													href="/city-ordinance"
 													className={navLinkClass('/city-ordinance', pathname)}
 												>
-													City Ordinance
-												</Link>
-											</NavigationMenuLink>
-										</li>
-									</ul>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-
-							{/* Community */}
-							<NavigationMenuItem>
-								<NavigationMenuTrigger className="bg-white">
-									Community
-								</NavigationMenuTrigger>
-								<NavigationMenuContent className="p-4">
-									<ul className="list-none grid gap-2 min-w-[200px]">
-										<li>
-											<NavigationMenuLink asChild>
-												<Link
-													href="/church"
-													className={navLinkClass('/church', pathname)}
-												>
-													Church
+													City Ordinances
 												</Link>
 											</NavigationMenuLink>
 										</li>
@@ -101,6 +80,28 @@ export default function Nav() {
 												</Link>
 											</NavigationMenuLink>
 										</li>
+									</ul>
+								</NavigationMenuContent>
+							</NavigationMenuItem>
+
+							{/* Historical */}
+							<NavigationMenuItem>
+								<NavigationMenuTrigger className="bg-white">
+									Historical
+								</NavigationMenuTrigger>
+								<NavigationMenuContent className="p-4">
+									<ul className="list-none grid gap-2 min-w-[200px]">
+										<li>
+											<NavigationMenuLink asChild>
+												<Link
+													href="/church"
+													className={navLinkClass('/church', pathname)}
+												>
+													Church
+												</Link>
+											</NavigationMenuLink>
+										</li>
+
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -111,17 +112,6 @@ export default function Nav() {
 												</Link>
 											</NavigationMenuLink>
 										</li>
-									</ul>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-
-							{/* History */}
-							<NavigationMenuItem>
-								<NavigationMenuTrigger className="bg-white">
-									History
-								</NavigationMenuTrigger>
-								<NavigationMenuContent className="p-4">
-									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -142,17 +132,6 @@ export default function Nav() {
 												</Link>
 											</NavigationMenuLink>
 										</li>
-									</ul>
-								</NavigationMenuContent>
-							</NavigationMenuItem>
-
-							{/* Other */}
-							<NavigationMenuItem>
-								<NavigationMenuTrigger className="bg-white">
-									Other
-								</NavigationMenuTrigger>
-								<NavigationMenuContent className="p-4">
-									<ul className="list-none grid gap-2 min-w-[200px]">
 										<li>
 											<NavigationMenuLink asChild>
 												<Link
@@ -162,7 +141,7 @@ export default function Nav() {
 														pathname
 													)}
 												>
-													High School
+													RRHS
 												</Link>
 											</NavigationMenuLink>
 										</li>
@@ -192,7 +171,7 @@ export default function Nav() {
 				<div className="sm:hidden px-4 pb-4">
 					<div className="space-y-4 text-gray-800">
 						<div>
-							<p className="font-semibold">Government</p>
+							<p className="font-semibold">Current</p>
 							<Link
 								href="/city-council"
 								className={navLinkClass('/city-council', pathname)}
@@ -207,17 +186,6 @@ export default function Nav() {
 							>
 								City Ordinance
 							</Link>
-						</div>
-
-						<div>
-							<p className="font-semibold">Community</p>
-							<Link
-								href="/church"
-								className={navLinkClass('/church', pathname)}
-								onClick={() => setMobileOpen(false)}
-							>
-								Church
-							</Link>
 							<Link
 								href="/business"
 								className={navLinkClass('/business', pathname)}
@@ -225,6 +193,18 @@ export default function Nav() {
 							>
 								Business
 							</Link>
+						</div>
+
+						<div>
+							<p className="font-semibold">Historical</p>
+							<Link
+								href="/church"
+								className={navLinkClass('/church', pathname)}
+								onClick={() => setMobileOpen(false)}
+							>
+								Church
+							</Link>
+
 							<Link
 								href="/person"
 								className={navLinkClass('/person', pathname)}
@@ -232,10 +212,6 @@ export default function Nav() {
 							>
 								People
 							</Link>
-						</div>
-
-						<div>
-							<p className="font-semibold">History</p>
 							<Link
 								href="/history"
 								className={navLinkClass('/history', pathname)}
@@ -250,10 +226,6 @@ export default function Nav() {
 							>
 								Historical Sites
 							</Link>
-						</div>
-
-						<div>
-							<p className="font-semibold">Other</p>
 							<Link
 								href="/raft-river-high-school"
 								className={navLinkClass('/raft-river-high-school', pathname)}
