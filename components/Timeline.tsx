@@ -26,8 +26,10 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
         bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl border`}
 			onClick={() => setExpandedId(isExpanded ? null : event.id)}
 		>
-			<div className="text-sm text-gray-500">{event.year}</div>
-			<h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+			<h3 className="text-xl font-semibold mb-2">{event.year}</h3>
+			{event.title && (
+				<div className="text-sm text-gray-500">{event.title}</div>
+			)}
 			{event.image && (
 				<img
 					src={event.image}
@@ -35,7 +37,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
 					className="w-full max-h-40 object-cover rounded-md mb-2"
 				/>
 			)}
-			{isExpanded && <p className="text-gray-700 mt-2">{event.content}</p>}
+			{isExpanded && <div className="text-gray-700 mt-2">{event.content}</div>}
 		</div>
 	)
 }
