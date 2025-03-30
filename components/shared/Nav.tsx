@@ -141,7 +141,20 @@ export default function Nav() {
 														pathname
 													)}
 												>
-													RRHS
+													Raft River High School
+												</Link>
+											</NavigationMenuLink>
+										</li>
+										<li>
+											<NavigationMenuLink asChild>
+												<Link
+													href="/raft-river-high-school/yearbook"
+													className={navLinkClass(
+														'/raft-river-high-school/yearbook',
+														pathname
+													)}
+												>
+													RRHS Yearbooks
 												</Link>
 											</NavigationMenuLink>
 										</li>
@@ -231,7 +244,17 @@ export default function Nav() {
 								className={navLinkClass('/raft-river-high-school', pathname)}
 								onClick={() => setMobileOpen(false)}
 							>
-								High School
+								Raft River High School
+							</Link>
+							<Link
+								href="/raft-river-high-school/yearbook"
+								className={navLinkClass(
+									'/raft-river-high-school/yearbook',
+									pathname
+								)}
+								onClick={() => setMobileOpen(false)}
+							>
+								RRHS Yearbooks
 							</Link>
 							<Link
 								href="/valley-vu-cemetery"
