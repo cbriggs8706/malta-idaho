@@ -25,6 +25,7 @@ export const timelineSections: TimelineSection[] = [
 				id: 1,
 				title: 'Organization of Malta Ward',
 				year: '1910',
+				image: '/next.svg',
 				content: (
 					<>
 						<p>
@@ -36,7 +37,8 @@ export const timelineSections: TimelineSection[] = [
 			},
 			{
 				id: 2,
-
+				image:
+					'/ordinances/MC-01-Fixing-time-place-of-meeting-pdf-638x1024.jpg',
 				year: '1910-1914',
 				content: (
 					<>
@@ -216,6 +218,7 @@ export const timelineSections: TimelineSection[] = [
 				id: 11,
 				title: 'New Church Building',
 				year: '1943',
+				image: '/church/3rdChurch-600x392.jpg',
 				content: (
 					<>
 						<p>
@@ -333,7 +336,7 @@ export const timelineSections: TimelineSection[] = [
 			{
 				id: 17,
 
-				year: '1971-1977 & 1977-1978',
+				year: '1971-1977',
 				content: (
 					<>
 						<p>
@@ -343,10 +346,10 @@ export const timelineSections: TimelineSection[] = [
 							<strong>1st Counselor:</strong> Jay Cottle
 						</p>
 						<p>
-							<strong>2nd Counselor:</strong> Cleve G Smith / Earl Brent Udy
+							<strong>2nd Counselor:</strong> Cleve G Smith
 						</p>
 						<p>
-							<strong>Ward Clerk:</strong> Kenneth Crump / Rodney Hall
+							<strong>Ward Clerk:</strong> Kenneth Crump
 						</p>
 					</>
 				),

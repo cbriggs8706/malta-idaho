@@ -18,9 +18,10 @@ export default function Page() {
 				{/* <CardDescription className="text-2xl text-center">
 					Rooted in the Land. Built by Pioneers. Shaped by Community.
 				</CardDescription> */}
-				<CardContent></CardContent>
+				<CardContent>
+					<ParallelTimeline />
+				</CardContent>
 			</Card>
-			<ParallelTimeline />
 		</>
 	)
 }

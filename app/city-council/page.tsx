@@ -19,22 +19,19 @@ export default function Page() {
 						<strong>Mayor</strong> – Tracy Bankhead
 					</li>
 					<li>
-						<strong>Council Member (Roads)</strong> – Richard Hall
+						<strong>Council Member</strong> – Marlene Hall
 					</li>
 					<li>
-						<strong>Council Member (Books)</strong> – Margie Neff
+						<strong>Council Member</strong> – Brandon Smith
 					</li>
 					<li>
-						<strong>Council Member (Park)</strong> – Amador Maldonado
-					</li>
-					<li>
-						<strong>Council Member (City Cleanup)</strong> – Tom Hogan
+						<strong>Council Member</strong> – Whitni Hesselgesser
 					</li>
 					<li>
 						<strong>City Clerk</strong> – Lisa Bankhead
 					</li>
 					<li>
-						<strong>Sheriff</strong> – Tony Bernad
+						<strong>Sheriff</strong> – Cordell Hansen
 					</li>
 				</ul>
 			</CardContent>

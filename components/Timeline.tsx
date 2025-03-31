@@ -21,7 +21,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
 
 	return (
 		<div
-			className={`relative mb-8 cursor-pointer transition-all duration-300 ease-in-out 
+			className={`relative text-center mb-8 cursor-pointer transition-all duration-300 ease-in-out 
         ${isDualColumn && isExpanded ? 'col-span-2' : 'col-span-1'} 
         bg-white rounded-2xl shadow-lg p-4 hover:shadow-xl border`}
 			onClick={() => setExpandedId(isExpanded ? null : event.id)}
@@ -34,7 +34,8 @@ const TimelineCard: React.FC<TimelineCardProps> = ({
 				<img
 					src={event.image}
 					alt={event.title}
-					className="w-full max-h-40 object-cover rounded-md mb-2"
+					className="mx-auto max-w-full w-auto max-h-60 object-contain rounded-md mb-2"
+					// className="w-full max-h-40 object-cover rounded-md mb-2"
 				/>
 			)}
 			{isExpanded && <div className="text-gray-700 mt-2">{event.content}</div>}
@@ -47,9 +48,7 @@ const ParallelTimeline: React.FC = () => {
 
 	return (
 		<div className="w-full max-w-6xl mx-auto py-8 px-4">
-			<h2 className="text-3xl font-bold text-center mb-10">
-				Organizational Timeline
-			</h2>
+			{/* <h2 className="text-3xl font-bold text-center mb-10">Malta Ward</h2> */}
 
 			{timelineSections.map((section, index) => {
 				return (
@@ -59,6 +58,10 @@ const ParallelTimeline: React.FC = () => {
 
 						{section.type === 'single' ? (
 							<div className="grid grid-cols-1 gap-8 relative z-10">
+								<h2 className="text-3xl font-bold text-center mb-10">
+									Malta Ward
+								</h2>
+
 								{section.events.map((event) => (
 									<TimelineCard
 										key={event.id}
@@ -71,6 +74,13 @@ const ParallelTimeline: React.FC = () => {
 							</div>
 						) : (
 							<div className="grid grid-cols-2 gap-8 relative z-10">
+								<h2 className="text-3xl font-bold text-center mb-10">
+									Malta 1st Ward
+								</h2>
+								<h2 className="text-3xl font-bold text-center mb-10">
+									Malta 2nd Ward
+								</h2>
+
 								<div className="space-y-8">
 									{section.left.map((event) => (
 										<TimelineCard
